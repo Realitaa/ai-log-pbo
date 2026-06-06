@@ -12,6 +12,16 @@ export default defineNuxtConfig({
     preference: 'light',
   },
 
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          langs: ['java', 'sql'],
+        },
+      },
+    },
+  },
+
   routeRules: {
     '/': { prerender: true },
   },

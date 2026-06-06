@@ -10,13 +10,13 @@ if (!post.value) {
 }
 
 useSeoMeta({
-  title: () => `${post.value?.title || 'Blog Post'} - Nuxt Starter Template`,
+  title: () => `${post.value?.title || 'Blog Post'}`,
   description: () => post.value?.description || '',
 })
 </script>
 
 <template>
-  <UContainer class="py-12 max-w-4xl">
+  <UContainer class="py-12 print:py-0 print:ml-4 max-w-4xl">
     <!-- Back button -->
     <UButton
       to="/blog"
@@ -74,7 +74,7 @@ useSeoMeta({
       </div>
 
       <!-- Rendered Markdown Content -->
-      <UPageBody class="prose dark:prose-invert max-w-none ">
+      <UPageBody class="prose dark:prose-invert max-w-none">
         <ContentRenderer :value="post" />
       </UPageBody>
     </article>
